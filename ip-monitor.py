@@ -80,13 +80,13 @@ def main(argv=None):
 
     while True:
 
-        #1 Query for the website content
+        #1 Query for the new public IP address
         new_ip = ip_query()
 
-        #2 Compare length of old and new content and process the result
+        #2 Compare old and new IP address and process the result
         if old_ip is new_ip:
             continue
-        elif len(new_ip) != len(old_ip):
+        else:
             current_time = pretty_time()
             result = "Your IP address is updated to " + new_ip + " at " + current_time + "\n"
             # Send email notification
